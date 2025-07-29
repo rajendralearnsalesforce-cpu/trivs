@@ -1,0 +1,9 @@
+os: linux
+language: generic
+dist: focal
+
+vm:
+  size: gpu-xlarge
+
+script:
+  - echo "TEST"
