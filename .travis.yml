@@ -1,9 +1,10 @@
 os: linux
-language: generic
 dist: focal
 
-vm:
-  size: gpu-xlarge
-
-script:
-  - echo "TEST"
+jobs:
+  include:
+    - name: "job one"
+      vm:
+        create:
+          name: custom_job_one_o
+      script: echo "condition with job one"
