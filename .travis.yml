@@ -3,8 +3,8 @@ dist: focal
 
 jobs:
   include:
-    - name: "job two"
+    - name: "job three"
       vm:
         create:
-          name: custom_job_two_o
-      script: echo "condition with job two"
+          name: custom_job_three_o
+      script: echo "condition with job three"
