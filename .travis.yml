@@ -1,10 +1,8 @@
-os: linux
-dist: focal
-
 jobs:
   include:
-    - name: "job one"
-      vm:
-        create:
-          name: custom_job_one_o
-      script: echo "condition with job one"
+    - stage: "Test" 
+      name: "Unit Tests"  
+      script: ./unit-tests
+    - stage: Test1
+      name: "Unit Tests1"
+      script: ./unit-tests1
