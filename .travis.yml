@@ -1,8 +1,10 @@
 jobs:
   include:
-    - stage: "Test" 
-      name: "Unit Tests"  
-      script: ./unit-tests
+    - stage: Test
+      name: Ruby
+      script:
+        - echo "Stage"
     - stage: Test1
-      name: "Unit Tests1"
-      script: ./unit-tests1
+      name: Ruby
+      script:
+        - echo "Stage 1"
