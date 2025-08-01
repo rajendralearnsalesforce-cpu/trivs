@@ -1,10 +1,22 @@
+language: node_js
+node_js:
+  - '18'
 jobs:
   include:
-    - os: linux
-      language: python
-      python:
-       - "3.8"
-      arch: amd64
-      dist: focal
+    - name: JavaScript tests
+      language: node_js
+      node_js: '18'
+      before_script:
+        - cd javascript
+        - npm install
       script:
-        - python hello_world.py
+        - npm test
+    - name: Ruby tests
+      language: ruby
+      rvm:
+        - 3.1.0
+      before_script:
+        - cd ruby
+        - bundle install
+      script:
+        - bundle exec rake test
